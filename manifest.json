@@ -5,7 +5,16 @@
 	"description": "This extension pauses any videos playing in any YouTube tabs, when Chrome is first launched.",
 	"version": "1.0",
 	
-	"page_action": {
-		
-	}
+	"background": {
+		"persistent": false,
+		"scripts": ["background.js"]
+	},
+	
+	"content_scripts": [
+		{
+			"matches": ["https://www.youtube.com/*", "http://www.youtube.com/*"],
+			"js": ["pause-youtube.js"],
+			"run_at": "document_end"
+		}
+	]
 }
