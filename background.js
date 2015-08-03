@@ -8,10 +8,7 @@ function populateListOfYouTubeTabs() {
 	chrome.tabs.query({"url": "https://www.youtube.com/watch*"}, function(tabs) {
 		console.log("Found", tabs.length, "YouTube tabs.");
 		
-		for (var i=0; i< tabs.length; i++) {
-			var id = tabs[i].id;
-			launchedTabIds.push(id);
-		}
+		launchedTabIds = tabs.map(function(t) {return t.id});
 	});	
 }
 
