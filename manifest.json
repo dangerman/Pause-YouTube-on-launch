@@ -10,11 +10,8 @@
 		"scripts": ["background.js"]
 	},
 	
-	"content_scripts": [
-		{
-			"matches": ["https://www.youtube.com/*", "http://www.youtube.com/*"],
-			"js": ["pause-youtube.js"],
-			"run_at": "document_end"
-		}
+	"permissions": [
+		"tabs",
+		"https://www.youtube.com/watch*"
 	]
 }
