@@ -3,7 +3,7 @@
 	
 	"name": "Pause YouTube on launch",
 	"description": "This extension pauses any videos playing in any YouTube tabs, when Chrome is first launched.",
-	"version": "1.0",
+	"version": "0.3",
 	
 	"background": {
 		"persistent": false,
